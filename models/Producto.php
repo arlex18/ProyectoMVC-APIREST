@@ -107,5 +107,20 @@ class Producto {
         // Ejecuta; devuelve true si salió bien
         return $stmt->execute();
     }
+
+ 
+        // Devuelve todos los productos como una lista, para usarla en los reportes
+    public function obtenerTodos()
+    {
+        // Consulta que pide todas las filas de la tabla productos
+        $sql = "SELECT * FROM productos";
+
+        // Prepara y ejecuta la consulta
+        $stmt = $this->conn->prepare($sql);
+        $stmt->execute();
+
+        // fetchAll devuelve todas las filas juntas, cada una como arreglo asociativo
+        return $stmt->fetchAll(PDO::FETCH_ASSOC);
+    }
 }
 ?>

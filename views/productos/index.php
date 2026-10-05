@@ -15,3 +15,11 @@
 </tr>
 <?php endwhile; ?>
 </table>
+
+<!-- Botón que lleva a la descarga del reporte en Excel -->
+<br>
+<a href="../reportes/excel.php">Exportar Excel</a>
+
+<!-- Botón que lleva a la generación del reporte en PDF -->
+<br>
+<a href="../reportes/pdf.php">Exportar PDF</a>
